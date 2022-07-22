@@ -1,17 +1,19 @@
 help_message = '''
-Отправьте команду /buy, чтобы перейти к покупке.
+В боте собраны самые распространенные платежные системы.\nВсе для твоего удобства и упрощения рабочего процесса.\n\n
 Узнать правила можно воспользовавшись командой /terms.
 '''
 
-start_message = 'Привет! Сейчас ты увидишь работу платежей в Telegram!\n' + help_message
+start_message = 'Привет! Здесь ты можешь заводить средства легко и просто.\n' + help_message
 
 terms = '''\
-Правила!
+Правила придуманы для того, чтобы их нарушать!\nЛибо мы заберем их деньги и отдадим ЗСУ, либо их деньги станут ракетами которые летят в наши города!\n\nЗвони заводи орков, не трать время!!!
 '''
 
-item_title = 'Ноутбук'
+item_title100 = 'Beginner Pack'
+item_title250 = 'Smart Start Pack'
+item_title500 = 'Smart Investor Pack'
 item_description = '''\
-Купить ноутбук крутой честно правда
+Стартовый пакет активации торгового счета.\nПосле подтверждения оплаты с Вами свяжется финансовый аналитик по указанному в платеже номеру.\nУдачной торговли с TradeFX24.net
 '''
 
 AU_error = '''\
@@ -27,7 +29,9 @@ MESSAGES = {
     'start': start_message,
     'help': help_message,
     'terms': terms,
-    'item_title': item_title,
+    'item_title100': item_title100,
+    'item_title250': item_title250,
+    'item_title500': item_title500,
     'item_description': item_description,
     'AU_error': AU_error,
     'successful_payment': successful_payment,

@@ -1,25 +1,61 @@
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton, ReplyKeyboardMarkup, KeyboardButton
 
+
+
+
+
+
 btnMain = KeyboardButton("Main Menu")
 
 # --- Main Menu --------------------------------
+
+btnSale = KeyboardButton("Sales")
+btnReten = KeyboardButton("Retention")
+mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnSale, btnReten)
+
+# --- Sales Menu ------------------------------------------
+
+btnRU = KeyboardButton("RU")
+btnUZ = KeyboardButton("UZ")
+btnEU = KeyboardButton("EU")
+SaleMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnRU, btnUZ).add(btnMain)
+
+# --- Sales Pack RU ------------------------------------------
+
+btn100 = KeyboardButton('RU/Beginner => 100$')
+btn250 = KeyboardButton('RU/Smart Start => 250$')
+btn500 = KeyboardButton('RU/Smart Trade => 500$')
+salePackMenu = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True).add(btn100, btn250, btn500).add(btnMain)
+
+# --- Sales Pack UZ ------------------------------------------
+
+btn100uz = KeyboardButton('UZ/Beginner => 100$')
+btn250uz = KeyboardButton('UZ/Smart Start => 250$')
+btn500uz = KeyboardButton('UZ/Smart Trade => 500$')
+salePackMenuUz = ReplyKeyboardMarkup(row_width=1, resize_keyboard=True, one_time_keyboard=True).add(btn100uz, btn250uz, btn500uz).add(btnMain)
+
+
+# --- Reten Menu ------------------------------------------
+
 btnEBanking = KeyboardButton("Internet Banking")
 btnEMoney = KeyboardButton("Internet Payments")
 btnMTransfers = KeyboardButton("Money Transfer")
 btnCash = KeyboardButton("Cash")
 btnCrypto = KeyboardButton("Cryptocurrency")
 btnOther = KeyboardButton("Other Menu")
-mainMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnEBanking,
+retenMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnEBanking,
                                                          btnEMoney,
                                                          btnMTransfers,
                                                          btnCrypto,
                                                          btnCash
-                                                         )
+                                                         ).add(btnMain)
 
 # --- Other Menu --------------------------------
+
 btnInfo = KeyboardButton("Info Button")
 btnMoney = KeyboardButton("Money Button")
-otherMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnInfo, btnMoney, btnMain)
+otherMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnInfo, btnMoney).add(btnMain)
+
 
 # --- E Banking Menu --------------------------------
 
@@ -50,6 +86,7 @@ EPaymentsMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnQiwi,
                                                               ).add(btnMain)
 
 # --- Money Transfer Payments Menu --------------------------------
+
 btnWU = KeyboardButton("Western Union")
 MTransferMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnWU).add(btnMain)
 
@@ -66,6 +103,12 @@ CryptoMenu = ReplyKeyboardMarkup(resize_keyboard=True).add(btnBtc,
                                                            btnTrc20,
                                                            btnSol
                                                            ).add(btnMain)
+
+
+
+
+
+
 
 
 

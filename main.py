@@ -2,10 +2,8 @@ import asyncio
 import logging
 from aiogram.utils import executor
 from aiogram import Bot, Dispatcher, types
-from pycoingecko import CoinGeckoAPI
-import random
+
 import config as cfg
-import markups as nav
 
 logging.basicConfig(level=logging.INFO)
 
@@ -64,4 +62,4 @@ dp = Dispatcher(bot, loop=loop)
 
 if __name__ == '__main__':
     from handlers import dp
-    executor.start_polling(dp, loop=loop)
+    executor.start_polling(dp, skip_updates=True, loop=loop)
